@@ -1,7 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta http-equiv="Content-Security-Policy"
+      content="
+        default-src 'self';
+        script-src 'self' https://cdn.jsdelivr.net 'unsafe-inline';
+        style-src  'self' https://cdn.jsdelivr.net 'unsafe-inline';
+        img-src    'self' data:;
+      ">
   <title>My Markdown + LaTeX Page</title>
 
   <!-- Marked to convert Markdown → HTML -->

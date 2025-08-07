@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>My Markdown + LaTeX Page</title>
+
+  <!-- Marked to convert Markdown → HTML -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+  <!-- MathJax for LaTeX (enable both inline $…$ and display $$…$$) -->
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 42rem; margin: 2rem auto; line-height: 1.6; }
+    h1,h2,h3 { margin-top: 2em; }
+    code, pre { background:#f5f5f5; padding: .2em .4em; border-radius:4px; }
+  </style>
+</head>
+<body>
+
+<!-- Your raw Markdown goes here -->
+<textarea id="raw-md" style="display:none">
+
+# Hello World
+
+Inline math $E = mc^2$ looks good.
+
+Block math:
+
+$$
+\int_0^\infty e^{-x^2}\,dx = \frac{\sqrt\pi}{2}
+$$
+
+## Code sample
+
+```python
+print("hi from python")
